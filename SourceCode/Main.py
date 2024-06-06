@@ -7,10 +7,6 @@ def Main():
     print("Old Value: " + str(money_cash.value))
     money_cash.set_value(int(9999999))
     print("New Value: " + str(money_cash.value))
-    CarrerStatus_klass = unity3d_pcbs2.find_class_in_image("Assembly-CSharp.dll", "CarrerStatus")
-    CollectCash = CarrerStatus_klass.find_method(method_name="CollectCash", param_count=2)
-    patch = CollectCash.native_patch(0x94, "MOV X0, 999999")
-    patch.enable()
 
 if __name__ == "__{}__".format("main"):
     Main()
